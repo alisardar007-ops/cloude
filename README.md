@@ -56,5 +56,5 @@ python3 collab.py "Design a rate limiter for a REST API"
 
 ## Choosing models
 
-Set `GEMINI_MODEL` (default `gemini-3.1-pro-preview`) or `CLAUDE_MODEL` (default `claude-opus-5-5`)
+Set `GEMINI_MODEL` (default `gemini-3.5-flash`) or `CLAUDE_MODEL` (default `claude-opus-5-5`)
 to override. For example, `export GEMINI_MODEL=gemini-2.5-pro`.

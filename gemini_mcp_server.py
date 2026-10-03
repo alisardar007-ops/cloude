@@ -15,7 +15,7 @@ from google import genai
 from google.genai import types
 from mcp.server.fastmcp import FastMCP
 
-DEFAULT_MODEL = "gemini-3.1-pro-preview"
+DEFAULT_MODEL = "gemini-3.5-flash"
 MAX_FILE_BYTES = 2_000_000
 
 mcp = FastMCP("gemini")

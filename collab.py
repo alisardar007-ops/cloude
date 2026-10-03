@@ -6,7 +6,7 @@ Usage:
 Env vars:
     GEMINI_API_KEY     from https://aistudio.google.com/apikey
     ANTHROPIC_API_KEY  from https://console.anthropic.com
-    GEMINI_MODEL       optional, defaults to gemini-3.1-pro-preview
+    GEMINI_MODEL       optional, defaults to gemini-3.5-flash
     CLAUDE_MODEL       optional, defaults to claude-opus-5-5
 """
 
@@ -16,7 +16,7 @@ import sys
 import anthropic
 from google import genai
 
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-pro-preview")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-opus-5-5")
 
 
