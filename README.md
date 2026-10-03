@@ -2,7 +2,7 @@
 
 Two ways to use Claude and Gemini together:
 
-1. **`gemini_mcp_server.py`**: an MCP server that gives Claude Code an `ask_gemini` tool.
+1. **`gemini_mcp_server.py`**: an MCP server that gives Claude Code `ask_gemini` and `make_video` tools.
 2. **`collab.py`**: a script where Gemini drafts an answer and Claude reviews it.
 
 ## Setup
@@ -47,6 +47,23 @@ For **Claude Desktop**, add this to `claude_desktop_config.json`:
 
 The `ask_gemini` tool takes these arguments: `prompt`, optional `files` (local text files to include),
 `system_instruction`, `model`, and `temperature`.
+
+### Making videos
+
+The `make_video` tool generates a short clip with Google's Veo model and saves it as an `.mp4` under
+`videos/`. You don't need to write the Veo prompt yourself. Describe the video you want and Claude writes
+the prompt, for example:
+
+- "Make a 9:16 video of a cat waving hello on a sunny windowsill."
+- "Make an 8-second product shot of a coffee mug rotating on a marble counter."
+
+Video needs **billing turned on** for your Gemini API key (in Google AI Studio). The free tier rejects every
+video request with `429 RESOURCE_EXHAUSTED`. Veo charges per second of video, so check Google's pricing page.
+Each clip takes a few minutes to generate.
+
+The tool takes `prompt`, optional `output_path`, `aspect_ratio` (`16:9` or `9:16`), `duration_seconds`,
+`negative_prompt`, and `model`. It defaults to the cheapest model, `veo-3.1-lite-generate-preview`.
+Set `VEO_MODEL` to `veo-3.1-fast-generate-preview` or `veo-3.1-generate-preview` for higher quality at a higher price.
 
 ## 2. Gemini drafts, Claude reviews
 
