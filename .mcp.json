@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "gemini": {
+      "command": "python3",
+      "args": ["gemini_mcp_server.py"]
+    }
+  }
+}
