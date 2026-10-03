@@ -1,6 +1,6 @@
-# Claude + Gemini Pro
+# Claude + Gemini
 
-Two ways to use Claude and Gemini Pro together:
+Two ways to use Claude and Gemini together:
 
 1. **`gemini_mcp_server.py`**: an MCP server that gives Claude Code an `ask_gemini` tool.
 2. **`collab.py`**: a script where Gemini drafts an answer and Claude reviews it.

@@ -1,4 +1,4 @@
-"""Gemini Pro drafts an answer, Claude reviews and improves it.
+"""Gemini drafts an answer, Claude reviews and improves it.
 
 Usage:
     python3 collab.py "Design a rate limiter for a REST API"

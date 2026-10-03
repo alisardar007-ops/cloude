@@ -1,4 +1,4 @@
-"""MCP server that lets Claude (Claude Code, Claude Desktop, ...) ask Gemini Pro.
+"""MCP server that lets Claude (Claude Code, Claude Desktop, ...) ask Gemini.
 
 Exposes one tool, `ask_gemini`, which sends a prompt (and optionally the
 contents of local files) to Gemini and returns its reply.
@@ -55,7 +55,7 @@ def ask_gemini(
     model: str | None = None,
     temperature: float | None = None,
 ) -> str:
-    """Ask Google Gemini Pro a question and return its answer.
+    """Ask Gemini a question and return its answer.
 
     Use this for a second opinion, to cross-check a solution, or to have
     Gemini read large files with its long context window.
